@@ -20,20 +20,34 @@ const Contain = () => {
 
     const addpassword = () => {
         // console.log(add);
-        setpasswordArray([...passwordArray, { ...add, id: uuidv4() }]);
-        localStorage.setItem("passwords", JSON.stringify([...passwordArray, { ...add, id: uuidv4() }]));
-        console.log(passwordArray, add);
-        setadd({ site: "", name: "", password: "" });
-        toast('🗝️Password added successfully!', {
-            position: "bottom-left",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-        });
+        if (add.site >= "3" && add.name >= "3" && add.password >= "3") {
+            setpasswordArray([...passwordArray, { ...add, id: uuidv4() }]);
+            localStorage.setItem("passwords", JSON.stringify([...passwordArray, { ...add, id: uuidv4() }]));
+            console.log(passwordArray, add);
+            setadd({ site: "", name: "", password: "" });
+            toast('🗝️Password added successfully!', {
+                position: "bottom-left",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        } else {
+            toast.error('🦄 Wow so easy!', {
+                position: "bottom-left",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+            });
+        }
     }
     const editpassword = (id) => {
         console.log("Editing this id: ", id);
@@ -61,6 +75,7 @@ const Contain = () => {
     return (
         <>
             <ToastContainer position="bottom-left" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick={false} rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" />
+            <ToastContainer position="bottom-left" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick={false} rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" transition={Bounce} />
             <div className='w-screen h-[90vh] flex items-center justify-center'>
                 <div className='w-[90vw] h-[80vh] bg-transparent flex flex-col items-center justify-between p-2 mt-[5vh] ml-[5vw] mr-[5vw] mb-[5vh] rounded-2xl shadow-xs shadow-indigo-300'>
                     <div className='w-full h-[30vh] flex flex-col items-center justify-center gap-1'>

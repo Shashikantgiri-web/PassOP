@@ -36,7 +36,7 @@ const Contain = () => {
                 theme: "dark",
             });
         } else {
-            toast.error('🦄 Wow so easy!', {
+            toast.error('Please fill all fields with at least 3 characters.', {
                 position: "bottom-left",
                 autoClose: 5000,
                 hideProgressBar: false,

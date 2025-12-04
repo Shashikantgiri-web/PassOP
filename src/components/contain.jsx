@@ -106,7 +106,7 @@ const Contain = () => {
                             </button>
                         </div>
                     </div>
-                    <div className='w-full h-[69vh] flex flex-col items-center justify-center overflow-y-scroll gap-1'>
+                    <div className='w-full min-h-[69vh] max-h-auto flex flex-col items-center justify-center gap-1'>
                         <div className='w-full h-[10%] flex items-center justify-center '>
                             <h1 className='hover:text-indigo-300 text-white text-2xl font-semibold cursor-pointer'>Your passwords</h1>
                         </div>

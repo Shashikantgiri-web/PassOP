@@ -75,8 +75,8 @@ const Contain = () => {
         <>
             <ToastContainer position="bottom-left" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick={false} rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" />
             <ToastContainer position="bottom-left" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick={false} rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" />
-            <div className='w-screen h-[90vh] flex items-center justify-center'>
-                <div className='w-[90vw] h-[80vh] bg-transparent flex flex-col items-center justify-between p-2 mt-[5vh] ml-[5vw] mr-[5vw] mb-[5vh] rounded-2xl shadow-xs shadow-indigo-300'>
+            <div className='w-screen min-h-[90vh] max-h-auto flex items-center justify-center'>
+                <div className='w-[90vw] min-h-[80vh] max-h-auto bg-transparent flex flex-col items-center justify-between p-2 mt-[5vh] ml-[5vw] mr-[5vw] mb-[5vh] rounded-2xl shadow-xs shadow-indigo-300'>
                     <div className='w-full h-[30vh] flex flex-col items-center justify-center gap-1'>
                         <div className="w-[99%] h-[24%] flex flex-row justify-start items-center gap-2">
                             <p className='text-white font-semibold'>

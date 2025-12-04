@@ -20,7 +20,7 @@ const Contain = () => {
 
     const addpassword = () => {
         // console.log(add);
-        if (add.site >= "3" && add.name >= "3" && add.password >= "3") {
+        if (add.site.length > 3 && add.name.length > 3 && add.password.length > 3) {
             setpasswordArray([...passwordArray, { ...add, id: uuidv4() }]);
             localStorage.setItem("passwords", JSON.stringify([...passwordArray, { ...add, id: uuidv4() }]));
             console.log(passwordArray, add);
